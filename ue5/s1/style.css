@@ -1,0 +1,1897 @@
+/* Police */
+
+@font-face {
+    font-family: "exo";
+    src: url("font/Exo-Italic.woff2") format("woff2"),   
+    url("font/Exo-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "marianne";
+    src: url("font/Marianne-Regular.woff") format("woff2"),   
+    url("font/Marianne-Regular.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "metropolis";
+    src: url("font/Metropolis-Regular.woff2") format("woff2"),   
+    url("font/Metropolis-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+*{
+    font-family: "metropolis";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: "marianne";
+}
+
+em, h4, h5, h6 {
+    font-family: "exo";
+}
+
+
+
+
+
+ 
+
+
+        /* Header */
+
+header {
+    margin-bottom: 10em;
+    top : 0;
+}
+
+/*Section*/
+
+header > section {
+    position: relative;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    top: 111px;
+    height: 235px;
+    width: 100%;
+    background-image: url(images/Imgheader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    border: 1px solid #000000;
+}
+
+header > section > p {
+    width: 420px;
+    height: 80px;
+    font-size: 1.2em;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+header > section > p + p {    
+    width: 501px;
+    height: 75px;
+    margin-right: 2em;
+    text-align: right;
+    align-self: flex-end;
+}
+
+/*Menu*/
+
+header > nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 110px;
+    background: #FFFFFF;
+    border-bottom: 2px solid #D3D3D3;
+    padding: 0;
+}
+
+header > a > img {
+    height: 50px;
+    width: auto;
+}
+
+header > nav > a,
+header > nav > ul > li > ul, 
+header > a > img {
+    display: none;
+}
+
+header > nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+header > nav > ul > li { 
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+    /* Logo */
+header > nav > ul > li > a > img {
+    display: block;
+    height: 105px;
+    width: auto;
+}
+
+    /* Liste */
+
+header > nav > ul > li > a {
+    display: block;
+    text-decoration: none;
+    color: #67AD67;
+    font-size: 1.4em;
+    font-variant: small-caps;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header > nav > ul > li:hover, 
+header > nav > ul > li:active {
+    border-top: #106B10 solid 3px;
+}
+
+header > nav > ul > li > a:hover, 
+header > nav > ul > li > a:active {
+    color: #106B10;
+}
+
+
+/* Bouton */
+header > nav > ul > li > button {
+    width: 14em;
+    height: 3.5em;
+    background: #228B22;
+    border: none;
+    padding: 0;
+}
+
+header > nav > ul > li > button > a {
+    display: block;
+    padding-top: 10px;
+    text-decoration: none; 
+    font-size: 1.6em;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+
+header > nav > ul > li > button:hover, 
+header > nav > ul > li > button:active {
+    background: #fff;
+    border: #106B10 solid 1px;
+}
+
+header > nav > ul > li > button > a:hover, 
+header > nav > ul > li > button > a:active {
+    color: #106B10;
+}
+
+
+
+
+
+
+
+ 
+    /* Accueil */
+
+#Accueil {
+    display: flex;
+    justify-content: center;
+}
+
+/* Les lignes */
+
+#Accueil > section + section {
+    border-left: 3px #E3E3E3 solid;
+}
+
+
+#Accueil > section > div > section {
+    display: flex;
+}
+#Accueil > section > div > section > img {
+    margin-top: 45px;
+}
+
+
+/* Titre */
+#Accueil h1 {
+    margin-left: 50px;
+    margin-bottom: 0;
+    color: #3C3DA4; 
+    font-size: 2.5em; 
+}
+
+#Accueil section > a {
+    text-decoration: none;
+}
+
+#Accueil section > div > section {
+    border-top: 3px #E3E3E3 solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+#Accueil section > div > section > img {
+    display: block;
+    height: 37px;
+    width: auto;
+    margin-left: 1em;
+}
+
+
+/* -- Les differentes proposition de sejour -- */
+#Accueil article {
+    display: flex; 
+    margin: 50px; 
+}
+
+    /* Ennonce du sejour */
+#Accueil h3 {
+    margin: 0 0 0.5em 0;
+    padding: 5px;
+    background-color: #E3E3E3;
+    color: #FF4500;
+}
+
+    /*Image de sejour*/
+
+#Accueil > section > div > article > a {
+    height: 100%;
+}
+
+#Accueil > section > div > article > a > img {
+    border-top: 5px #E3E3E3 solid;
+    height: 185px; 
+    width: 250px; 
+}
+
+
+#Accueil > section > div > article > section > div,   
+#Accueil > section > div > article > section > p {
+    margin-left: 1em;
+}
+
+
+#Accueil > section > div > article > section > div {
+    display: flex; 
+    justify-content: space-between;
+}
+
+
+    /*Prix*/
+    #Accueil div > p {
+        margin: 0;
+        padding: 0;
+        color: #228B22;
+        margin-right: 5px;
+        text-align: right;
+    }
+    
+    #Accueil div > p + p {
+        font-weight: bold;
+    }
+    
+    #Accueil div > div {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #Accueil div > div > p {
+        font-style: italic;
+    }
+    
+    #Accueil div > div > div {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #Accueil div > div > p + p,
+    #Accueil div > div > div > p {
+        font-style: normal;
+    }
+    
+    #Accueil div > div > div > p {
+        color: #FFA07D;
+        font-weight: normal;
+        text-decoration: line-through;
+    }
+    
+    #Accueil div > div > div > p + p {
+        color: #228B22;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Etablissement + Lien */
+#Accueil p > a {
+    text-decoration: none;
+    font-weight: bold; 
+    color: #000000;
+}
+
+
+    /*Type d'activité*/
+#Accueil span {
+    font-weight: bold; 
+    color: #3C3DA4;
+}
+
+    /*Lien 'En savoir plus...'*/
+#Accueil p > a > em {
+    display: block;
+    text-align: right;
+    color: #3C3DA4;
+}
+
+#Accueil p > a > em {
+    display: block;
+    text-align: right;
+    color: #3C3DA4;
+}
+
+#Accueil p > a > em:hover, 
+#Accueil p > a > em:active {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Sejour */
+
+#Sejour h2 a {
+    text-decoration: none;
+}
+
+#Sejour h1, 
+#Sejour h2 a,
+#Sejour h2 {
+    color : #0A0B52;  
+    text-align: center;
+    margin : 1em;
+}
+  
+  
+#Sejour blockquote {
+      font-style: italic;
+      text-align: center;
+      font-size: large;
+      margin: 2px 300px;
+  }
+  
+#Sejour blockquote + section {
+      display: flex;
+      flex-direction:row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  
+  
+  #Sejour blockquote + section > article {
+      margin : 1.5em;
+      padding : 1em;
+      background-color: #DBEFDB;
+      color: #045004;
+      border-radius: 10px;
+      display: flex;
+      flex-direction:column;
+      text-align: center;
+  }
+  
+  #Sejour blockquote + section > article > figure{
+      display: flex;
+      flex-direction:row;
+  }
+  
+  #Sejour section > article > p {
+      margin : 0.5em;
+      padding : 0.5em;
+  }
+  
+  #Sejour img {
+      border-radius: 10px;
+      display: flex;
+  }
+  
+  #Sejour #note img{
+      width : 20px;
+  }
+  
+  #Sejour .paysage_conteneur img{
+      width: 40%;
+  }
+  
+  #Sejour #programme_conteneur img {
+      width : 20%;
+  }
+  
+  #Sejour #lien img{
+      width : 30px;
+      height: 30px;
+  }
+  
+  #Sejour #plongee_mer img {
+      width : 100%;
+  }
+  
+  #Sejour #tarif_conteneur img {
+      width : 300px;
+      position: relative;
+  }
+  #Sejour section > img {
+      margin : 1em;
+  }
+  
+  #Sejour #maison {
+      z-index: 1;
+      right: 200px;
+  }
+    
+  #Sejour #plongee {
+      top: -60px;
+      right: 30px;
+  }
+    
+  #Sejour #paysage {
+      z-index: 1;
+      top: -100px;
+      right: 250px;
+  }
+  
+  #Sejour article {
+      border-radius: 10px;
+      margin: 1em;
+      padding: 2em;
+  }
+  
+  #Sejour section {
+      display : flex; 
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  #Sejour section > article > ul {
+      align-items: center;
+      color : black;
+  }
+  
+  #Sejour #plus {
+      background-color: #CBD5F1;
+      color : #0A0B52;
+      box-shadow: 5px 5px #0A0B52;
+      margin : 1em;
+  }
+  
+  #Sejour section > div > article {
+      background-color: #FFA07D;
+      color: #842908;
+      box-shadow: 5px 5px #842908;
+      margin : 1em;
+  }
+  
+  #Sejour #lien {
+      background-color: #DBEFDB;
+      color: #045004;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding : 1em;
+      margin : 3em;
+  }
+  
+  #Sejour article#lien > a:hover {
+      color: #045004;
+  }
+  
+  #Sejour article#lien > a:link {
+      color: #045004;
+  }
+  
+  #Sejour article#lien > a:visited {
+      color: #045004;
+  }
+  
+  #Sejour article#lien > a:active {
+      color: #045004;
+  }
+  
+  #Sejour article#lien > a {
+      padding : 1em;
+  }
+  
+  #Sejour section#programme {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background-color: white;
+      padding: 1em;
+  }
+  
+  #Sejour article + section#programme > figure {
+      display: inline-flex;
+      flex-direction: row;
+      background-color: white;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+  
+  #Sejour #programme {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  #Sejour .prog {
+      display: flex;
+      flex-direction: row;
+  }
+  
+  #Sejour div.prog > article {
+      background-color: white;
+      color: #0A0B52;
+      border-style: inset;
+      border-color: #0A0B52;
+      box-shadow: 0px 0px;
+  }
+  
+  
+  #Sejour article + section#programme > figure img {
+      margin: 1em;
+  }
+  
+  #Sejour #fournitures {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+  
+  #Sejour section#fournitures article {
+      display: flex;
+      flex-direction: column;
+      width: 13em;
+      height: 10em;
+      justify-content: center;
+      align-items: center;
+      background-color: #DBEFDB;
+      color: #045004;
+  }
+  
+  
+  
+  #Sejour section#fournitures + figure {
+      display: flex;
+      justify-content: center;
+  }
+  
+  #Sejour div {
+      display: flex;
+      justify-content: center;
+  }
+  #Sejour section#tarifs{
+      background-color: #CBD5F1;
+      border-radius: 10px;
+      padding : 1em;
+      margin-top : 1em;
+      width: 80%;
+      z-index: -2;
+  }
+  
+  #Sejour section#tarifs > article {
+      display: flex;
+      flex-direction: row;
+      margin : 0.5em;
+      position: relative;
+      justify-content: space-between;
+  }
+  
+  #Sejour section#tarifs > article > div {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  #Sejour section#tarifs > article > div h2{
+      text-align:start;
+      padding-left : 1em;
+  }
+  
+  #Sejour section#tarifs > div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap : wrap;
+      justify-content: center;
+  }
+  
+  #Sejour section#tarifs > div article{
+      background-color: #CBD5F1;
+      box-shadow: none;
+      color: #0A0B52;
+  }
+
+
+
+
+
+
+
+ 
+/* Hebergement */
+
+#Hebergement #etablissement h1, 
+#Hebergement #localisation h1{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3c3da4;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+#Hebergement #nom_localisation{
+    color: #106B10;
+    text-transform: none;
+}
+
+/*  PARTIE ETABLISSEMENT    */
+
+/*flex pour le groupage d'image*/
+#Hebergement #etablissement > article {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#Hebergement #etablissement > article > :last-child{
+    width: 45%;
+    margin-right: 2em;
+}
+
+/*groupement des images*/
+#Hebergement #etablissement > article > :first-child{
+    width: 500px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+}
+
+#Hebergement #etablissement div > div > img{
+    width: 230px;
+}
+
+#Hebergement #etablissement img{
+    border-radius: 10px;
+    width: 500px;
+}
+
+/*espacement des images verticalement*/
+#Hebergement #etablissement > article > :first-child > *{
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+/*deux images collés horizontalement*/
+#Hebergement #etablissement div:first-of-type > div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+}
+
+/*paragraphe de droite*/
+#Hebergement #etablissement article > :last-child{
+    text-align: center;
+    max-width: 600px;
+}
+
+/*espacement entre les blocs*/
+#Hebergement #etablissement article > :last-child > div > :last-child{
+    margin-bottom: 5em;
+}
+
+#Hebergement #etablissement ul, 
+#Hebergement #localisation ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+/*hr d'espacement*/
+#Hebergement  hr{
+    margin-top: 3em;
+}
+
+/*  PARTIE LOCALISATION */
+
+#Hebergement #localisation h1{
+    margin-top: 3em;
+}
+
+#Hebergement #etablissement h2, #Hebergement #localisation h2{
+    font-size: 2em;
+    font-weight: bold;
+    color: #292A7F;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* partie etablissement */
+#Hebergement #etablissement h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #106B10;
+}
+
+/*pour la partie localisation*/
+#Hebergement #localisation h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #292A7F;
+}
+
+/*bannière*/
+#Hebergement #localisation img{
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+/*map*/
+#Hebergement iframe{
+    height: 675px;
+    width: 100%;
+}
+
+/*alignement texte de gauche*/
+#Hebergement #localisation > div:first-of-type > :first-child{
+    text-align: center;
+}
+
+/*espacement entre bloc*/
+#Hebergement #localisation article:first-of-type > div > :last-child{
+    margin-bottom: 5em;
+}
+
+/*texte du bas*/
+#Hebergement #localisation > :last-child > article{
+    text-align: center;
+}
+
+/*espaces entre foooter et 2 bloc bas main*/
+#Hebergement #localisation > :last-child{
+    margin: 5em auto;
+}
+
+/*button*/
+#Hebergement #localisation button{
+    color: white;
+    background: #0A0B52;
+    border-radius: 10px;
+    height: 40px;
+}
+
+
+
+
+
+
+/* Catalogue */
+
+#Catalogue {
+    color: #fff;
+}
+
+    /*regroupement séjour*/
+#Catalogue section{
+    margin: 150px 10em 150px 24em;
+
+
+}
+#Catalogue section article{
+    border-color: #3c3da4 ;
+    border-style: solid;
+    overflow-x: scroll;
+    border-radius: 10px;
+    padding-left: 20px ;
+    margin-bottom: 15px;
+    
+}
+
+    /*séjours*/
+#Catalogue section figure{
+    background-color: #228b22;
+    border-radius: 10px;
+    width: 260px;
+    height: 305px;
+    margin-left: 0px;
+}
+
+
+#Catalogue section figcaption{
+    background-color: #106b10;
+    border-radius: 10px;
+    width: 215px;
+    height: 115px;
+    padding-bottom: 28px;
+}
+
+#Catalogue section figcaption {
+    text-align: center;
+}
+
+#Catalogue section h1, 
+#Catalogue section h2 {
+    color: #ff4500;
+    z-index: -1;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: underline;
+    text-decoration-color: #3c3da4 ;
+    position: sticky;
+    left: 20px;
+}
+
+#Catalogue section h1{
+    font-size: 48px;
+}
+
+#Catalogue section div>img{
+    transform: rotate(-30deg);
+    position: relative;
+    right: 16em;
+    top: 9em;
+}
+
+#Catalogue section div {
+    margin-bottom: 10px;
+    z-index: -1;
+}
+
+#Catalogue section div>p{
+    position: relative;
+    top: 7.5em;
+    right: 15em;
+    font-weight: bold;
+    font-size: 18px;
+    width: 180px;
+}
+
+/*menu navigation séjours*/
+#Catalogue aside{
+    background-color: #228b22;
+
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top:112px;
+    left: 0px;
+}
+
+#Catalogue aside h2{
+    background-color: #ff4500;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: auto 15px;
+    
+}
+
+#Catalogue aside h1{
+    background-color: #3c3da4;
+    border-radius: 10px;
+    font-size: 48px;
+    text-align: center;
+    padding: 5px;
+    margin: 60px 15px;
+    
+}
+
+#Catalogue aside ul {
+    list-style-type: none;
+}
+
+#Catalogue aside li{
+    font-size: 25px;
+}
+
+#Catalogue aside a{
+    text-decoration: none;
+}
+
+#Catalogue aside a:link,
+#Catalogue aside a:visited {
+    color: #fff;
+}
+
+#Catalogue aside a:hover {
+    color: #000000;
+}
+
+#Catalogue section figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Catalogue section article div{
+    display: flex;
+    align-items: center;
+}
+
+#Catalogue article>div{
+    display: inline-flex;
+}
+
+
+/*pour firefox*/
+#Catalogue section article {
+    scrollbar-color: #3c3da4 #fff;
+}
+
+
+/*pour les autres*/
+#Catalogue section article::-webkit-scrollbar {
+    width: 12px;
+}
+#Catalogue section article::-webkit-scrollbar-thumb {
+    background-color: #3c3da4; 
+    border-radius: 10px; 
+}
+
+
+/*footer du catalogue*/
+#Cataloguefoot{
+    margin-left: 300px;
+}
+
+/*header du catalogue*/
+#Catalogueheader section{
+    margin-left: 300px;
+    width: 83.7%
+}
+
+#Catalogueheader section p + p {
+    margin-right: 325px;
+}
+
+ 
+/* Footer */
+
+footer{
+    position: relative;
+    margin: 0;
+    margin-top: 100px;
+    z-index: -1;
+}
+/*ecriture en gras pour la plupart du footer*/
+footer > div nav, footer > p, footer article > h6{
+    font-weight: bold;
+}
+
+/*met en majuscule le "NOUS CONTACTER"*/
+footer article > h6{
+    text-transform :uppercase;
+    font-size: 0.9em;
+}
+
+/*fond gris sur partie haute du footer*/
+footer > div{
+    background: #d3d3d3;
+}
+
+/*bandeau en bas du footer*/
+footer > p{
+    background: #292A7F;
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    padding: 7px;
+}
+
+/*flex box pour nav et article*/
+footer > div{
+    width: 100%;
+    color: #0A0B52;
+    display : inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*changement de puce*/
+footer nav ul{
+    list-style-type: '>';
+}
+
+/*le "soulignage" des li (partie gauche)*/
+footer li{
+    border-bottom: #0A0B52 solid 2px;
+    padding: 2em;
+    width: 200px;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #0A0B52;
+}
+
+footer > div > div{
+    margin-top: 2em;
+}
+
+/*flex partie contact et img/logo*/
+footer > div > div > article > div{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*logo facebook et twitter*/
+footer > div > div > article > div img{
+    flex-basis: 25px;
+    height: 25px;
+    align-self: center;
+    margin-right: 0.5em;
+}
+
+/*flex pour 2 icones et logo*/
+footer > div > div > div{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer > div > div > div img{
+    margin-right: 2em;
+}
+
+/*img logo sport koh*/
+footer > div > div > div > img{
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+
+ 
+@media screen and (min-width: 1000px) and (max-width: 1190px)
+{
+    /* Accueil */
+    
+    #Accueil {
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    #Accueil > section + section {
+        border-left: none;
+    }
+
+    #Accueil > section + section > div {
+        border-top: 3px #E3E3E3 solid;
+    }
+
+    section > div > section {
+        border-top: none;
+    }
+
+
+    
+    /* Hebergement */
+
+    #Hebergement {
+        margin-top: 10em;
+    }
+
+        /* localisation*/
+
+        /*passage en colonne*/
+    #Hebergement #localisation > div{
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    #Hebergement #localisation > div:first-of-type > *{
+        width: 40%;
+    }
+
+        /*separateur entre les deux paragraphes*/
+    #Hebergement #localisation > :last-child > div{
+        height: 100px;
+        border-left: gray solid 2px;
+    }
+
+    #Hebergement iframe{
+        width: auto;
+    }
+}
+
+
+
+
+
+
+
+ 
+@media screen and (min-width: 700px) and (max-width: 1000px)
+{
+    header > section, 
+    header > section > p {
+        display: none;
+        width: 1px;
+        height: 1px;
+    }
+
+    header {
+        position: fixed;
+        top : 0;
+        display: flex;
+        width: 100%;
+        height: 80px;
+        background-color: #FFFFFF;
+        border-bottom: 2px solid #3C3DA4;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 25px;
+        margin: 0;
+    }
+
+    header > nav > ul > li:hover, 
+    header > nav > ul > li:active {
+        border-top: none;
+    }
+
+
+        /* Menu */
+
+        header > nav > a,
+        header > nav > ul > li > ul, 
+        header > a > img {
+            display: block;
+        }
+        
+        header > nav > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: stretch;
+            padding-left: 25px;
+            list-style: none;
+            margin-top: 0;
+        }
+
+        header > nav > ul > li > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: stretch;
+            padding-left: 25px;
+            list-style: none;
+            margin-top: 0;
+        }
+        
+        header > nav > ul > li {
+            height: auto; 
+        }
+        
+        header > a > img {
+            height: 80px;
+            width: auto;
+        }
+
+        header > nav > ul > a {
+            display: none;
+        }
+    
+
+        /* Menu Burger */
+        .sidenav {
+            height: 100%;
+            width: 20em;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -20em;
+            background-color: #FFF;
+            padding-top: 0;
+            transition: left 0.5s ease;
+            border-right: 4px solid #E3E3E3;
+        }
+        
+        /* Sidenav menu links */
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            text-align: left;
+            color: #3C3DA4;
+            font-weight: bolder; 
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav > ul > li > ul > li > a 
+        {
+            text-indent: 30px;
+            font-size: 1.3em;
+            color: #3C3DA4;
+            font-weight: normal;
+        }
+
+        .sidenav a:hover {
+            color: #0A0B52;
+        }
+        
+        .sidenav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Active class */
+        .sidenav.active {
+            left: 0;
+        }
+        
+        /* Close btn */
+
+        .sidenav .close {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+        
+        /* Icône burger */
+        .burger-icon span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: #3C3DA4;
+            margin: 6px 0;
+        }
+    
+    /* Bouton */
+    header > nav > ul > li > button {
+        width: auto; 
+        height: auto;
+        background-color: #FFF;
+        border: none;
+    }
+
+    header > nav > ul > li > button:hover, 
+    header > nav > ul > li > button:active {
+        border: none;
+
+    }
+
+    header > nav > ul > li > button > a:hover, 
+    header > nav > ul > li> button > a:active {
+        color: #FFF;
+    }
+
+
+
+    header > nav > ul > li > a > img {
+        display: none;
+    }
+    
+    /* Accueil */
+    
+    #Accueil {
+        margin-top: 10em;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    #Accueil > section + section {
+        border-left: none;
+    }
+
+    #Accueil > section + section > div {
+        border-top: 3px #E3E3E3 solid;
+    }
+
+    #Accueil section > div > section {
+        border-top: none;
+    }
+
+
+    /* Sejour */
+
+    #Sejour {
+        margin-top: 10em;
+    }
+
+    #Sejour section#tarifs > article {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #Sejour #tarifs > article > div > img {
+        width : 500px;
+    } 
+        
+    #Sejour #tarif_conteneur img {
+        width : 300px;
+    }
+    
+    #Sejour  #maison {
+        right: 80px;
+    }
+        
+    #Sejour #plongee {
+        top: -60px;
+        right: -100px;
+    }
+        
+    #Sejour #paysage {
+        top: -100px;
+        right: 100px;
+    }
+
+    
+    /* Hebergement */
+
+    #Hebergement #etablissement img{
+        width: 300px;
+    }
+
+    #Hebergement #etablissement > article > :first-child{
+        width: 300px;
+        margin-left: 50px;
+        margin-right: 2em;
+    }
+
+    #Hebergement #etablissement > article > :last-child{
+        width: 300px;
+        margin-right: 20px;
+    }
+
+    #Hebergement #etablissement div > div > img{
+        width: 130px;
+        margin: 0;
+    }
+
+    #Hebergement #etablissement article > :last-child > div > :last-child{
+        margin-bottom: 40px
+    }
+
+
+    /* Catalogue */
+
+    #Catalogue {
+        margin-top: 10em;
+    }
+
+    /*retirer le menu de navigation des séjours*/
+    #Catalogue aside{
+        display: none;
+    }
+    /*retirer les séjours a la une car deja sur la page d'accueil*/
+    #Catalogue .une{
+        display: none;
+    }
+
+    #Catalogue section{
+        margin: 0px 0px;
+    }
+
+    #Catalogue section article{
+        border-style: none;
+    }
+    #Catalogue section h1{
+        display: none;
+    }
+
+    #Catalogue section h2{
+        margin-bottom: 0px;
+        z-index: -1;
+    }
+
+    #Catalogue section div>img, 
+    #Catalogue section div>p {
+        z-index: -1;
+    }
+
+    #Catalogue section figure {
+        z-index: -1;
+    }
+
+    #Cataloguefoot{
+        margin-left: 0;
+    }
+
+}
+
+
+
+
+
+
+
+ 
+@media screen and (min-width: 0px) and (max-width: 700px)
+{
+    /* Header */
+
+    header > section, 
+    header > section > p {
+        display: none;
+        width: 1px;
+        height: 1px;
+    }
+
+    header {
+        position: fixed;
+        top : 0;
+        display: flex;
+        width: 100%;
+        height: 80px;
+        background-color: #FFFFFF;
+        border-bottom: 2px solid #3C3DA4;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 25px;
+        margin: 0;
+    }
+
+    header > nav > ul > li:hover, 
+    header > nav > ul > li:active {
+        border-top: none;
+    }
+
+
+        /* Menu */
+
+        header > nav > a,
+        header > nav > ul > li > ul, 
+        header > a > img {
+            display: block;
+        }
+        
+        header > nav > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: stretch;
+            padding-left: 25px;
+            list-style: none;
+            margin-top: 0;
+        }
+
+        header > nav > ul > li > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: stretch;
+            padding-left: 25px;
+            list-style: none;
+            margin-top: 0;
+        }
+        
+        header > nav > ul > li {
+            height: auto; 
+        }
+        
+        header > a > img {
+            height: 80px;
+            width: auto;
+        }
+
+        header > nav > ul > a {
+            display: none;
+        }
+    
+
+        /* Menu Burger */
+        .sidenav {
+            height: 100%;
+            width: 20em;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: -20em;
+            background-color: #FFF;
+            padding-top: 0;
+            transition: left 0.5s ease;
+            border-right: 4px solid #E3E3E3;
+        }
+        
+        /* Sidenav menu links */
+        .sidenav a, .sidenav ul li button{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            text-align: left;
+            color: #3C3DA4;
+            font-weight: bolder; 
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav > ul > li > ul > li > a 
+        {
+            text-indent: 30px;
+            font-size: 1.3em;
+            color: #3C3DA4;
+            font-weight: normal;
+        }
+
+        .sidenav a:hover {
+            color: #0A0B52;
+        }
+        
+        .sidenav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Active class */
+        .sidenav.active {
+            left: 0;
+        }
+        
+        /* Close btn */
+
+        .sidenav .close {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+        
+        /* Icône burger */
+        .burger-icon span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: #3C3DA4;
+            margin: 6px 0;
+        }
+    
+    /* Bouton */
+    header > nav > ul > li > button {
+        width: auto; 
+        height: auto;
+        background-color: #FFF;
+        border: none;
+        padding: 0;
+    }
+
+    header > nav > ul > li > button > a {
+        text-align: start;
+        padding: 0;
+    }
+
+    header > nav > ul > li > button:hover, 
+    header > nav > ul > li > button:active {
+        border: none;
+
+    }
+
+    header > nav > ul > li > button > a:hover, 
+    header > nav > ul > li> button > a:active {
+        color: #FFF;
+    }
+
+
+
+    header > nav > ul > li > a > img {
+        display: none;
+    }
+
+
+
+    header > nav > ul > a > img {
+        display: none;
+    }
+
+
+
+    /*  Accueil */
+    #Accueil {
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    #Accueil > section + section {
+        border-left: none;
+    }
+
+    #Accueil > section + section > div {
+        border-top: none;
+    }
+
+    #Accueil section > div > section {
+        border-top: none;
+    }
+    
+    #Accueil > section > div > article 
+    {
+        display : flex; 
+        flex-direction: column;
+    }
+
+    #Accueil > section > div > article > a > img {
+        width: 413px; 
+        height: 300px; 
+    }
+
+    
+    
+    
+    /* Sejour */
+
+    #Sejour {
+        margin-top: 10em;
+    }
+
+    #Sejour #tarif_conteneur img {
+        width : 150px;
+    }
+
+    #Sejour #maison {
+        right: 80px;
+    }
+        
+    #Sejour #plongee {
+        top: -60px;
+        right: -100px;
+    }
+        
+    #Sejour #paysage {
+        top: -100px;
+        right: 100px;
+    }
+    #Sejour blockquote {
+        margin: 2px 100px;
+    }
+    #Sejour #programme_conteneur {
+        margin: 0;
+
+    }
+    #Sejour #programme_conteneur img {
+        width : 150px;
+    }
+
+    #Sejour section#tarifs > article {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    #Sejour #tarifs > article > div > img {
+        width : 350px;
+    } 
+    
+    #Sejour #tarif_conteneur img {
+        width : 150px;
+    }
+    
+    #Sejour  #maison {
+        right: 80px;
+    }
+        
+    #Sejour #plongee {
+        top: -60px;
+        right: -100px;
+    }
+        
+    #Sejour #paysage {
+        top: -100px;
+        right: 100px;
+    }
+
+    #Sejour blockquote {
+        margin: 2px 100px;
+    }
+    #Sejour #programme_conteneur {
+        margin: 0;
+    
+    }
+    #Sejour #programme_conteneur img {
+        width : 150px;
+    }
+
+
+
+    /* Hebergement */
+
+    #Hebergement {
+        margin-top: 10em;
+    }
+
+    /*pour que l'image princiaple puisse s'y accrocher*/
+    #Hebergement #etablissement > article{
+        position: relative;
+    }
+
+    /*placement de l'image au dessus du paragraphe*/
+    #Hebergement #etablissement > article > :first-child > :first-child {
+        position:absolute;
+        z-index: -1;
+        top: 0;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    /*passage en mode colonne*/
+    #Hebergement #etablissement > article {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    /*espace pour placer l'image au dessus*/
+    #Hebergement #etablissement > article > :last-child{
+        z-index: -1;
+        margin-top: 70%;
+        margin-right: 0;
+    }
+
+    /*image prend tout l'écran*/
+    #Hebergement #etablissement > article > :first-child > img{
+            width: 100%;
+    }
+    
+    /*centrer + agrandit*/
+    #Hebergement #etablissement > article > :first-child{
+        z-index: -1;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*image cote à cote*/
+    #Hebergement #etablissement div > div > img{
+        width: 45%;
+        margin: 0;
+    }
+
+
+    
+    /* Catalogue */
+
+    #Catalogue {
+        margin-top: 10em;
+    }
+
+    /*retirer le menu de navigation des séjours*/
+    #Catalogue aside{
+        display: none;
+    }
+    /*retirer les séjours a la une car deja sur la page d'accueil*/
+    #Catalogue .une{
+        display: none;
+    }
+
+    #Catalogue section{
+        margin: 0px 0px;
+    }
+
+    #Catalogue section article{
+        border-style: none;
+    }
+    #Catalogue section h1{
+        display: none;
+    }
+
+    #Catalogue section h2{
+        margin-bottom: 0px;
+        z-index: -1;
+    }
+
+    #Catalogue section div>img, 
+    #Catalogue section div>p {
+        z-index: -1;
+    }
+
+    #Catalogue section figure {
+        z-index: -1;
+    }
+
+    #Cataloguefoot{
+        margin-left: 0;
+    }
+
+
+
+    /* Footer */
+
+    footer > div{
+        flex-direction: column;
+    }
+
+    /*reduction de la taille de l'image*/
+    footer > div > div > div > img{
+        width: 150px;
+    }
+
+    /*decalage vers la droite*/
+    footer > div > div{
+        padding-left: 20%;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+    /* localisation*/
+
+    /*passage en colonne*/
+    #localisation > div{
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    #localisation > div:first-of-type > *{
+        width: 40%;
+    }
+
+    /*separateur entre les deux paragraphes*/
+    #localisation > :last-child > div{
+        height: 100px;
+        border-left: gray solid 2px;
+    }
+
+    iframe{
+        width: auto;
+    }
+}

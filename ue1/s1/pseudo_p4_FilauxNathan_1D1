@@ -1,0 +1,115 @@
+/**
+*
+* Jeu de Puissance 4
+*
+* auteur : Filaux Nathan
+*
+* date : 20 octobre 2022
+*
+* version : 1.0
+*
+* Ce programme permet de réaliser des parties de 
+* puissance 4 avec deux utilisateurs différents
+*
+*/
+
+type Grille = tableau[<1..6,1..7>] de caractère;
+
+
+procédure ligne_etoiles();
+
+procédure creer_grille(entF/sortF Grille);
+
+fonction copie_grille(entF Grille) delivre Grille;
+
+procédure affiche_grille(entF Grille);
+
+procédure positionne_jeton(entF entier, entF caractère, entF/sortF Grille, sortF int);
+
+fonction verif_choix_colonne(entF int, entF Grille) delivre booléen;
+
+procédure faire_jouer(entF caractère, entF chaine, entF/sortF Grille);
+
+procédure verif_fin(entF/sortF Grille, sortF int);
+
+fonction demande_nom(entF int) délivre chaine;
+
+
+programme puissance4 c'est
+
+constante entier LARGEUR := 7;
+constante entier HAUTEUR := 6;
+constante caractère SYMBOLE_J1 := 'x';
+constante caractère SYMBOLE_J2 := 'o';
+constante caractère SYMBOLE_DEMANDE := '*';
+
+début
+    grille : Grille;
+    jouer : booléen;
+    nb_tour : entier;
+    nb_aleatoire : int;
+    fin_partie : int;
+    rejouer_reponse : caractère;
+    jouer := VRAI;
+    nom_joueur1 : chaine;
+    nom_joueur2 : chaine;
+
+    tant que jouer faire
+
+        écrireEcran("Bienvenue dans le jeu Puissance 4");
+        ligne_etoilee();
+        nom_joueur1 := demande_nom();
+        écrireEcran(nom_joueur1, "vos jetons seront représentés par des", SYMBOLE_J1);
+        nom_joueur2 := demande_nom();
+        écrireEcran(nom_joueur2, "vos jetons seront représentés par des", SYMBOLE_J2);
+
+        grille := creer_grille();
+        affiche_grille(entE grille);
+        nb_tour := aléatoire(0,1);
+        nb_aleatoire = nb_tour;
+        fin_partie := 0;
+
+        tant que (fin_partie == 0 ET (nb_tour-nb_aleatoire < 42) faire    /* la condition nb_tour-nb_aleatoire < 42 permet d'arreter la partie si le tableau est plein*/
+
+            si (nb_tour%2 == 0) alors
+                écrireEcran("C'est le tour du joueur1");
+                affiche_grille(entE grille);
+                faire_jouer(entE SYMBOLE_J1, entE nom_joueur1, entE/sortE grille);
+
+            sinon
+                écrireEcran("C'est le tour du joueur2");
+                affiche_grille(entE grille);
+                faire_jouer(entE SYMBOLE_J2, entE nom_joueur2, entE/sortE grille);                
+            finsi
+
+            ligne_etoiles();
+            fin_partie = verif_fin(entE grille);
+            nb_tour := nb_tour +1;
+
+        finfaire
+
+        si (fin_partie == 1) alors
+            écrireEcran("Le joueur 1 (",nomjoueur1,") a gagné !");
+        
+        sinon si (fin_partie == 2) alors
+            écrireEcran("Le joueur 2 (",nom_joueur2,") a gagné !");
+
+        sinon 
+            écrireEcran("Match nul !");
+
+        finsi
+        
+        écrireEcran("Voici la grille de fin :");
+        affiche_grille(entE grille);
+
+        ligne_etoiles();
+
+        écrireEcran("Voulez-vous continuer ?");
+        écrireEcran("Entrez \"O\" pour oui ou \"N\" pour non : ");
+        lireClavier(rejouer_rep);
+
+        si (caractere_ouiNon == 'N' OU rejouer_rep == 'n') alors
+            jouer := FAUX;
+        finsi
+    finfaire
+fin
